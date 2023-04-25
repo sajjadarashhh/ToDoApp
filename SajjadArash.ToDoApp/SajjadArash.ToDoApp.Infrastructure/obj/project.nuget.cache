@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "CMveN4xUgYcfyqF3pY8MaSYDU6C3rmstYiSbOCLRHz5N9EnglZki3RAM/O8DSGLryhskGjcm4E18BOQmPOUfTQ==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\sajja\\Source\\Repos\\ToDoApp\\SajjadArash.ToDoApp\\SajjadArash.ToDoApp.Infrastructure\\SajjadArash.ToDoApp.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sajja\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\sajja\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\sajja\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
