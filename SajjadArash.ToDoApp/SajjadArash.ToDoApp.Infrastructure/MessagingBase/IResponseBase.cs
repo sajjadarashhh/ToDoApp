@@ -15,9 +15,9 @@ namespace SajjadArash.ToDoApp.Infrastructure.MessagingBase
     /// <inheritdoc cref="IResponseBase"/>
     /// </summary>
     /// <typeparam name="TEntity">خروجی</typeparam>
-    public interface IResponseBase<TEntity> : IResponseBase
+    public interface IResponseBase<TEntity> : IResponseBase where TEntity : IViewModelBase
     {
-        public IEnumerable<TEntity> Entities { get; set; }
+        public TEntity Entity { get; set; }
     }
     /// <summary>
     /// <inheritdoc cref="IResponseBase"/>
@@ -33,8 +33,8 @@ namespace SajjadArash.ToDoApp.Infrastructure.MessagingBase
     /// <inheritdoc cref="IResponseBase"/>
     /// </summary>
     /// <typeparam name="TEntity"><inheritdoc cref="IResponseBase{TEntity}"/></typeparam>
-    public interface IResponsePagingSize<TEntity> : IResponseBase<TEntity>, IResponsePagingBase
+    public interface IResponsePagingBase<TEntity> : IResponsePagingBase where TEntity : IViewModelBase
     {
-
+        public IEnumerable<TEntity> Entities { get; set; }
     }
 }
