@@ -8,10 +8,19 @@ namespace SajjadArash.ToDoApp.Infrastructure.MessagingBase
         bool IsSuccess { get; set; }
         ApplicationCodes Code { get; set; }
     }
-    public class ResponseBase : IResponseBase
+    public interface IResponseBase<TEntity> : IResponseBase
     {
-        public string Message { get; set; }
-        public bool IsSuccess { get; set; }
-        public ApplicationCodes Code { get; set; }
+        public IEnumerable<TEntity> Entities { get; set; }
+    }
+    public interface IResponsePagingBase : IResponseBase
+    {
+        public int Index { get; set; }
+        public int Size { get; set; }
+        public int TotalFiltered { get; set; }
+        public int Total { get; set; }
+    }
+    public interface IResponsePagingSize<TEntity> : IResponseBase<TEntity>, IResponsePagingBase
+    {
+
     }
 }
