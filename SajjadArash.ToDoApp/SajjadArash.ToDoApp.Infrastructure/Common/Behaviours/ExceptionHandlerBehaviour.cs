@@ -8,6 +8,9 @@ using Serilog;
 
 namespace SajjadArash.ToDoApp.Infrastructure.Common.Behaviours
 {
+    /// <summary>
+    /// مدیریت خطاهای درون سرویس
+    /// </summary>
     public class ExceptionHandlerBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequestBase where TResponse : IResponseBase
     {
 

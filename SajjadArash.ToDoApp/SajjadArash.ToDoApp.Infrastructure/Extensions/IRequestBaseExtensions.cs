@@ -70,7 +70,7 @@ namespace SajjadArash.ToDoApp.Infrastructure.Extensions
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public static IResponseBase Exception<TResponse>(this IRequestBase request, ApplicationCodes code = ApplicationCodes.Exception, string message = null) where TResponse : IResponseBase
+        public static IResponseBase Exception(this IRequestBase request, ApplicationCodes code = ApplicationCodes.Exception, string message = null)
         {
             return new ResponseBase()
             {

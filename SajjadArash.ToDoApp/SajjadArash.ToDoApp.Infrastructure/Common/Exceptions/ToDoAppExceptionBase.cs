@@ -2,6 +2,9 @@
 
 namespace SajjadArash.ToDoApp.Infrastructure.Common.Exceptions
 {
+    /// <summary>
+    /// قالب خطاهای داخل پروژه
+    /// </summary>
     public abstract class ToDoAppExceptionBase : Exception
     {
         public abstract ApplicationCodes Code { get; }

@@ -4,6 +4,9 @@ using SajjadArash.ToDoApp.Infrastructure.MessagingBase;
 
 namespace SajjadArash.ToDoApp.Infrastructure.Common.Behaviours
 {
+    /// <summary>
+    /// اعتبار سنجی ورودی های کاربران
+    /// </summary>
     public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
