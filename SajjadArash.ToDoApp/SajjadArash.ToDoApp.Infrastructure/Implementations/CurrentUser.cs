@@ -1,7 +1,7 @@
 ﻿using SajjadArash.ToDoApp.Infrastructure.Common.Interfaces;
 using SajjadArash.ToDoApp.Infrastructure.Enums;
 
-namespace SajjadArash.ToDoApp.Infrastructure.Common.Implementations
+namespace SajjadArash.ToDoApp.Infrastructure.Implementations
 {
     /// <summary>
     /// <inheritdoc cref="ICurrentUser"/>
