@@ -5,16 +5,25 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace SajjadArash.ToDoApp.Infrastructure.Extensions
 {
+    /// <summary>
+    /// <inheritdoc cref="IResponseBase"/>
+    /// </summary>
     internal record ResponseBase : IResponseBase
     {
         public string Message { get; set; }
         public bool IsSuccess { get; set; }
         public ApplicationCodes Code { get; set; }
     }
+    /// <summary>
+    /// <inheritdoc cref="IResponseBase{TEntity}"/>
+    /// </summary>
     internal record ResponseBase<TEntity> : ResponseBase, IResponseBase<TEntity> where TEntity : IViewModelBase
     {
         public TEntity Entity { get; set; }
     }
+    /// <summary>
+    /// <inheritdoc cref="IResponsePagingBase"/>
+    /// </summary>
     internal record ResponsePagingBase : ResponseBase, IResponsePagingBase
     {
         public int Index { get; set; }
@@ -22,6 +31,9 @@ namespace SajjadArash.ToDoApp.Infrastructure.Extensions
         public int TotalFiltered { get; set; }
         public int Total { get; set; }
     }
+    /// <summary>
+    /// <inheritdoc cref="IResponsePagingBase{TEntity}"/>
+    /// </summary>
     internal record ResponsePagingBase<TEntity> : ResponsePagingBase, IResponsePagingBase<TEntity> where TEntity : IViewModelBase
     {
         public IEnumerable<TEntity> Entities { get; set; }
