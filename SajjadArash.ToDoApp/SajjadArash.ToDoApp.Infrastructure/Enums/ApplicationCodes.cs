@@ -6,6 +6,7 @@
     public enum ApplicationCodes
     {
         Success,
+        InputInvalid,
         Exception
     }
 }
