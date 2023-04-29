@@ -4,12 +4,19 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using SajjadArash.ToDoApp.Infrastructure.Common.Exceptions;
 using SajjadArash.ToDoApp.Infrastructure.Common.Interfaces;
 using SajjadArash.ToDoApp.Infrastructure.ModelSuperBase;
+using SajjadArash.ToDoApp.Model.Tables.Tasks;
+using SajjadArash.ToDoApp.Model.Tables.Users;
 using System.Runtime.CompilerServices;
 
 namespace SajjadArash.ToDoApp.Model
 {
+    /// <summary>
+    /// رابط بین نرم افزار و دیتابیس sql server
+    /// </summary>
     public class ToDoDb : DbContext
     {
+        public DbSet<UserModel> Users { get; set; }
+        public DbSet<TasksModel> Tasks { get; set; }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             if (ChangeTracker.HasChanges())
