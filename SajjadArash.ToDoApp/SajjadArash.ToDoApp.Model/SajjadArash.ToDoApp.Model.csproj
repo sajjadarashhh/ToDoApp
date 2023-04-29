@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ValueGenerators\" />
+    <ProjectReference Include="..\SajjadArash.ToDoApp.Infrastructure\SajjadArash.ToDoApp.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

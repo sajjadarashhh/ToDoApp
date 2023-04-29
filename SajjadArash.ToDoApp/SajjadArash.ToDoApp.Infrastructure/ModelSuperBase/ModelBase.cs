@@ -7,8 +7,10 @@
     {
         public Guid? CreatedUserId { get; set; }
         public Guid? UpdatedUserId { get; set; }
+        public Guid? DeletedUserId { get; set; }
         public DateTime CreatedDate { get; set; }
-        public DateTime? UpdateDate { get; set; }
+        public DateTime DeletedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
         public bool IsDeleted { get; set; }
     }
     /// <summary>
